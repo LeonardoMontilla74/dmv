@@ -1,0 +1,33 @@
+.navbar
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 6rem;
+  background-color: #404040;
+}
+
+.listItems
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+  justify-items: flex-end;
+  margin: 2rem;
+}
+
+.listItems li:hover
+{
+  cursor: pointer;
+  filter: brightness(0.6);
+  transition: ease-in-out 300ms;
+}
+
+.logo
+{
+  margin: 2rem;
+  border-radius: 999px;
+}
