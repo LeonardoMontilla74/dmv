@@ -14,13 +14,32 @@ export default function Navbar() {
           alt='logo'
           width={80}
           height={80}
+          priority
           className={styles.logo}
         />
       </Link>
       <ul className={styles.listItems}>
-        <li>Servicios</li>
-        <li>Contáctanos</li>
-        <li>Sobre Nosotros</li>
+        <li>
+          <Link
+            href='#services'
+            className={styles.link}>
+            Servicios
+          </Link>
+        </li>
+        <li>
+          <Link
+            href='#contact'
+            className={styles.link}>
+            Contáctanos
+          </Link>
+        </li>
+        <li>
+          <Link
+            href='#about'
+            className={styles.link}>
+            Sobre Nosotros
+          </Link>
+        </li>
       </ul>
     </nav>
   );

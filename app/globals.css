@@ -1,48 +1,37 @@
-/* Document
- * ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
-
 html
 {
   line-height: 1.15;
-  /* 1 */
   -ms-text-size-adjust: 100%;
-  /* 2 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
+    scroll-behavior: smooth;
 }
 
+#services
+{
+  background-image: url('/assets/mustang.jpg');
+}
+
+#contact
+{
+  background-color: blue;
+}
+
+#about
+{
+  background-color: red;
+}
 body
 {
   margin: 0;
+  margin-top: 6.4rem;
   padding: 0;
 }
-
-/* Sections
- * ========================================================================== */
-
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Edge, Firefox, and Safari.
- */
 
 h1
 {
   font-size: 2em;
   margin: 0.67em 0;
 }
-
-/* Grouping content
- * ========================================================================== */
-
-/**
- * Remove the margin on nested lists in Chrome, Edge, IE, and Safari.
- */
 li
 {
   list-style: none;
@@ -56,10 +45,6 @@ ul dl
 {
   margin: 0;
 }
-
-/**
- * Remove the margin on nested lists in Edge 18- and IE.
- */
 
 ol ol,
 ol ul,
