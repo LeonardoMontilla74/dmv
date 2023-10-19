@@ -21,6 +21,10 @@ body
   background-size: 100vw;
   background-position: center;
 }
+
+#about {
+  height: calc(100vh - 10rem);
+}
 h1
 {
   font-size: 2em;

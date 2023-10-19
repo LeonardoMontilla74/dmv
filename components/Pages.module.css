@@ -1,7 +1,7 @@
 /* ------------------ GENERAL ---------------- */
 .section {
   display: flex;
-  width: 98.5vw;
+  width: 98.7vw;
   height: calc(100vh - 6.1rem);
   scroll-margin-top: 6rem;
 }
