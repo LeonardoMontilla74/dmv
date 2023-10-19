@@ -7,13 +7,8 @@ import styles from '@/components/Pages.module.css';
 
 export default function Services() {
   return (
-    <section
-      id="services"
-      className={styles.section}
-    >
-      <header className={styles.title}>
-        <h2>Nuestros servicios</h2>
-      </header>
+    <section id="services" className={styles.section}>
+
       <div className={styles.cardServices}>
         <Image
           src={mustang}
@@ -22,9 +17,10 @@ export default function Services() {
           height={200}
           className={styles.image}
         />
-        <span className={styles.card}>
-          <h3 className={styles.cardTitle}>Asesoramiento en tramites de renovación del DMV.</h3>
-          <p className={styles.textDesc}>Hacemos todo tipo de trámites, inspecciones,
+
+        <span className={styles.text}>
+          <h3>Asesoramiento en tramites de renovación del DMV.</h3>
+          <p>Hacemos todo tipo de trámites, inspecciones,
             renovación de sticker, aseguranzas,
             permisos temporales, títulos y más</p>
           <strong>Para todo tipo de vehículos</strong>
