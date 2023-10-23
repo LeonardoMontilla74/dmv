@@ -1,12 +1,16 @@
-import styles from '@/components/Pages.module.css';
+import styles from './Pages.module.css';
+import stylesW from './Whatsapp.module.css';
+import WhatsappForm from './WhatsappForm';
 
 export default function Contact() {
   return (
-    <section
+    <aside
       id="contact"
       className={styles.section}
     >
-      Contact
-    </section>
+      <section className={stylesW.container}>
+        <WhatsappForm />
+      </section>
+    </aside>
   );
 }
