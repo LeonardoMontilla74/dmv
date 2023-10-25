@@ -1,54 +1,73 @@
 'use client';
 
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import { IFormData } from '@/interfaces/IForm';
 import styles from './Whatsapp.module.css';
 
 export default function WhatsappForm() {
-  const [phone, setPhone] = useState('');
-  const [msg, setMsg] = useState('');
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<IFormData>();
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setPhone('');
-    setMsg('');
-  }
+  const onSubmit: SubmitHandler<IFormData> = (data) => {
+    // eslint-disable-next-line no-console
+    console.log(data);
+    reset();
+  };
 
   return (
-    <form
-      onSubmit={(e) => handleSubmit(e)}
-      className={styles.form}
-    >
-      <label>Tú numero de teléfono</label>
-      <input
-        type="number"
-        name="phone"
-        minLength={10}
-        required
-        placeholder="Ejemplo: 154 518 1495"
-        value={phone}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => setPhone(e.target.value)}
-      />
+    <div className={styles.container}>
 
-      <br />
-
-      <label>Tú mensaje</label>
-      <textarea
-        name="msg"
-        cols={30}
-        rows={10}
-        required
-        minLength={3}
-        placeholder='Escribe tu mensaje aqui...'
-        value={msg}
-        onChange={(e) => setMsg(e.target.value)}
+      <form onSubmit={handleSubmit(onSubmit)}
+        className={styles.form}
       >
-      </textarea>
 
-      <input
-        type="submit"
-        value="Enviar"
-        disabled={!phone || !msg}
-      />
-    </form>
+        <label>Nombre</label>
+        <input
+          type="text"
+          {...register('nombre', { required: true, minLength: 3 })}
+        />
+        {errors.nombre?.type === 'required' && <p className={styles.error}>El nombre es requerido</p>}
+        {errors.nombre?.type === 'minLength' && <p className={styles.error}>El nombre debe tener al menos tres letras</p>}
+
+        <label>Teléfono</label>
+        <input
+          type="tel"
+          {...register('telefono', { required: true, minLength: 10 })}
+        />
+        {errors.telefono && <p className={styles.error}>Escribe tu numero de telefono</p>}
+
+        <label>Seleccione su requerimiento</label>
+        <select
+          {...register('type')}
+        >
+          <option defaultValue={''} value="">Elija su opción</option>
+          <option value="aseguranza">Aseguranzas</option>
+          <option value="sticker">Sticker</option>
+          <option value="placas">Placas temporales</option>
+        </select>
+
+        <label>Escríbenos aquí</label>
+        <textarea
+          cols={20}
+          rows={5}
+          {...register('msg', { required: true, minLength: 3 })}
+        >
+        </textarea>
+        {errors.msg && <p className={styles.error}>
+          Escribe tu mensaje. ¡Es importante para nosotros!
+        </p>}
+
+        <input
+          type="submit"
+          value="Enviar"
+          disabled={false}
+        />
+
+      </form>
+    </div>
   );
 }

@@ -11,3 +11,9 @@
   flex-direction: column;
   gap: 0.3rem;
 }
+
+.error {
+  font-size: x-small;
+  color: tomato;
+  margin: 0.5rem;
+}
