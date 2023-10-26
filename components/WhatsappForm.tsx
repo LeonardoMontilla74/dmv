@@ -50,9 +50,15 @@ export default function WhatsappForm() {
           {...register('type')}
         >
           <option defaultValue={''} value="">Elija su opción</option>
-          <option value="aseguranza">Aseguranzas</option>
-          <option value="sticker">Sticker</option>
-          <option value="placas">Placas temporales</option>
+          <option
+            className={styles.input}
+            value="aseguranza">Aseguranzas</option>
+          <option
+            className={styles.input}
+            value="sticker">Sticker</option>
+          <option
+            className={styles.input}
+            value="placas">Placas temporales</option>
         </select>
 
         <textarea

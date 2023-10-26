@@ -2,7 +2,7 @@
 .section {
   display: flex;
   width: 98.7vw;
-  height: calc(100vh - 6rem);
+  height: 100vh;
   margin-top: 6rem;
   scroll-margin-top: 6rem;
 }
