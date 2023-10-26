@@ -62,8 +62,6 @@ export default function WhatsappForm() {
         </select>
 
         <textarea
-          cols={20}
-          rows={5}
           placeholder='Escribénos aquí...'
           className={styles.textarea}
           {...register('msg', { required: true, minLength: 3 })}

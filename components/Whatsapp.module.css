@@ -1,8 +1,8 @@
 .container{
   display: flex;
-  width: 98vw;
+  width: 50vw;
   height: 80vh;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 }
 
@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 0.3rem;
+  gap: 0.4rem;
   background: #20002c;  /* fallback for old browsers */
     background: linear-gradient(to right, rgba(255, 205, 112, 0.205) 100%, #20002c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background: -webkit-linear-gradient(to right, rgba(255, 205, 112, 0.205) 100%, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
@@ -19,6 +19,7 @@
   padding: 30px;
   width: 300px;
   height: 62vh;
+  min-height: max-content;
   border: solid #3e045e 0.5rem;
 }
 
@@ -38,22 +39,21 @@
   cursor: pointer;
 }
 
-.button:hover {
-  border: 2px solid #5B0888;
-  background: #00000000;
-  color: #5B0888;
-}
-
 .button:active {
   border: 2px solid #66da4300;
   background: #5B0888;
   color: #ffff;
 }
 
+.button:disabled {
+  background-color: #6c4381;
+  cursor: no-drop;
+}
+
 .input {
   width: calc(100% - 10px);
   padding: 8px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid #66da4300;
   border-bottom: 1px solid #5B0888;
   outline: none;
@@ -99,6 +99,9 @@
 }
 
 .error {
-  font-size: x-small;
-  color: tomato;
+  font-size: 1rem;
+  color: white;
+  background-color: orchid;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
 }

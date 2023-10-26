@@ -4,9 +4,9 @@ import styles from '@/components/Pages.module.css';
 
 export default function Services() {
   return (
-    <section id="services" className={styles.section}>
+    <article id="services" className={styles.article}>
 
-      <div className={styles.cardServices}>
+      <section className={styles.cardServices}>
 
         <span className={styles.frontCard}>
           <h3>Asesoramiento en tramites de renovación del DMV.</h3>
@@ -25,7 +25,7 @@ export default function Services() {
           />
         </span>
 
-      </div>
-    </section>
+      </section>
+    </article>
   );
 }

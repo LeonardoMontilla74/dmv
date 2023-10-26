@@ -4,13 +4,24 @@ import WhatsappForm from './WhatsappForm';
 
 export default function Contact() {
   return (
-    <aside
+    <article
       id="contact"
-      className={styles.section}
+      className={styles.article}
     >
+
+      <section className={stylesW.container}>
+        <div className={styles.cardContact}>
+          <p>Si desea contactarnos,
+            puede hacerlo a través de nuestras redes sociales,
+            nuestro teléfono o nuestro formulario web.
+          </p>
+          <strong>¡Estaremos encantados de atenderle y resolver sus dudas!</strong>
+        </div>
+      </section>
+
       <section className={stylesW.container}>
         <WhatsappForm />
       </section>
-    </aside>
+    </article>
   );
 }
