@@ -29,11 +29,33 @@
 /* ------------------ CONTACT ---------------- */
 
 .cardContact {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   width: 75%;
   height: max-content;
   padding: 1rem;
   margin: 1rem;
   font-size: 1.7rem;
 }
+
+.car {
+  margin: 1rem;
+}
 /* ------------------ ABOUT ---------------- */
+
+.container{
+  display: flex;
+  width: 80vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardAbout {
+  width: 66%;
+  height: max-content;
+  padding: 1rem;
+  margin: 1rem;
+  font-size: 1.5rem;
+}
