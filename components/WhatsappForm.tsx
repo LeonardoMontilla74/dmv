@@ -8,9 +8,9 @@ export default function WhatsappForm() {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isValid },
     reset,
-  } = useForm<IFormData>();
+  } = useForm<IFormData>({ mode: 'onChange' });
 
   const onSubmit: SubmitHandler<IFormData> = (data) => {
     // eslint-disable-next-line no-console
@@ -25,23 +25,28 @@ export default function WhatsappForm() {
         className={styles.form}
       >
 
-        <label>Nombre</label>
         <input
           type="text"
+          placeholder='Nombre'
+          className={styles.input}
           {...register('nombre', { required: true, minLength: 3 })}
         />
-        {errors.nombre?.type === 'required' && <p className={styles.error}>El nombre es requerido</p>}
-        {errors.nombre?.type === 'minLength' && <p className={styles.error}>El nombre debe tener al menos tres letras</p>}
+        {errors.nombre?.type === 'required'
+          && <p className={styles.error}>El nombre es requerido</p>}
+        {errors.nombre?.type === 'minLength'
+          && <p className={styles.error}>El nombre debe tener al menos tres letras</p>}
 
-        <label>Teléfono</label>
         <input
           type="tel"
+          placeholder='Teléfono'
+          className={styles.input}
           {...register('telefono', { required: true, minLength: 10 })}
         />
         {errors.telefono && <p className={styles.error}>Escribe tu numero de telefono</p>}
 
         <label>Seleccione su requerimiento</label>
         <select
+          className={styles.input}
           {...register('type')}
         >
           <option defaultValue={''} value="">Elija su opción</option>
@@ -50,10 +55,11 @@ export default function WhatsappForm() {
           <option value="placas">Placas temporales</option>
         </select>
 
-        <label>Escríbenos aquí</label>
         <textarea
           cols={20}
           rows={5}
+          placeholder='Escribénos aquí...'
+          className={styles.textarea}
           {...register('msg', { required: true, minLength: 3 })}
         >
         </textarea>
@@ -61,11 +67,14 @@ export default function WhatsappForm() {
           Escribe tu mensaje. ¡Es importante para nosotros!
         </p>}
 
-        <input
-          type="submit"
-          value="Enviar"
-          disabled={false}
-        />
+        <center>
+          <input
+            type="submit"
+            value="Enviar"
+            disabled={!isValid}
+            className={styles.button}
+          />
+        </center>
 
       </form>
     </div>

@@ -10,22 +10,20 @@ export default function Services() {
 
         <span className={styles.frontCard}>
           <h3>Asesoramiento en tramites de renovación del DMV.</h3>
-          <p>Hacemos todo tipo de trámites, inspecciones,
+          <p>Nos encargamos de los trámites tediosos, inspecciones,
             renovación de sticker, aseguranzas,
-            permisos temporales, títulos y más</p>
+            permisos temporales, títulos y mucho más... </p>
         </span>
 
-        <div className={styles.backCard}>
-          <span>
-            <strong>Para todo tipo de vehículos</strong>
-            <Image
-              src={cars}
-              alt='todo tipo de vehiculos'
-              width={400}
-              height={180}
-            />
-          </span>
-        </div>
+        <span>
+          <strong className={styles.strong}>Para todo tipo de vehículos</strong>
+          <Image
+            src={cars}
+            alt='todo tipo de vehiculos'
+            width={450}
+            height={180}
+          />
+        </span>
 
       </div>
     </section>
