@@ -8,7 +8,7 @@ export default function Services() {
 
       <section className={styles.cardServices}>
 
-        <span className={styles.frontCard}>
+        <span>
           <h3>Asesoramiento en tramites de renovación del DMV.</h3>
           <p>Nos encargamos de los trámites tediosos, inspecciones,
             renovación de sticker, aseguranzas,
