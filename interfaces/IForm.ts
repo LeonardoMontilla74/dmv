@@ -1,6 +1,6 @@
 export interface IFormData {
   nombre: string,
-  telefono: string,
+  mail: string,
   type?: 'n/a' | 'aseguranza' | 'sticker' | 'placas',
   msg: string,
 }
