@@ -1,6 +1,7 @@
 'use client';
 
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useState } from 'react';
 import { IFormData } from '@/interfaces/IForm';
 import styles from './Whatsapp.module.css';
 
@@ -12,10 +13,28 @@ export default function WhatsappForm() {
     reset,
   } = useForm<IFormData>({ mode: 'onChange' });
 
-  const onSubmit: SubmitHandler<IFormData> = (data) => {
-    // eslint-disable-next-line no-console
-    console.log(data);
-    reset();
+  const [loading, setLoading] = useState(false);
+  const [sendResult, setSendResult] = useState({ msg: '', error: false });
+
+  const onSubmit: SubmitHandler<IFormData> = async (data) => {
+    setLoading(true);
+
+    const result = await fetch('/api', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    });
+
+    if (result.status === 202) {
+      setSendResult({ msg: 'Mensaje enviado... ¡Gracias!', error: false });
+      reset();
+    } else {
+      setSendResult({ msg: 'Algo salió mal. Por favor vuelve a interntarlo', error: true });
+    }
+
+    setTimeout(() => {
+      setLoading(false);
+      setSendResult({ msg: '', error: false });
+    }, 3500);
   };
 
   return (
@@ -29,20 +48,50 @@ export default function WhatsappForm() {
           type="text"
           placeholder='Nombre'
           className={styles.input}
-          {...register('nombre', { required: true, minLength: 3 })}
+          {...register('nombre', {
+            required: true,
+            minLength: 3,
+            pattern: {
+              value: /^([a-zA-ZñÑáéíóúÁÉÍÓÚ ])+$/i,
+              message: 'El nombre debe ser solo texto',
+            },
+          })}
         />
         {errors.nombre?.type === 'required'
           && <p className={styles.error}>El nombre es requerido</p>}
+        {errors.nombre?.type === 'pattern'
+          && <p className={styles.error}>{errors.nombre.message}</p>}
         {errors.nombre?.type === 'minLength'
           && <p className={styles.error}>El nombre debe tener al menos tres letras</p>}
 
         <input
-          type="tel"
-          placeholder='Teléfono'
+          type='email'
+          placeholder='Correo electrónico'
           className={styles.input}
-          {...register('telefono', { required: true, minLength: 10 })}
+          {...register('email', {
+            pattern: {
+              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+              message: 'Email inválido',
+            },
+          })}
         />
-        {errors.telefono && <p className={styles.error}>Escribe tu numero de telefono</p>}
+        {errors.email && <p className={styles.error}>Escribe tú correo electronico</p>}
+
+        <input
+          type="tel"
+          placeholder='Teléfono para contactarnos contigo'
+          className={styles.input}
+          {...register('telefono', {
+            required: true,
+            minLength: 10,
+            pattern: {
+              value: /^(\+\d{1, 2}\s)?(\(\d{3}\)\s?|\d{3}[\s.-]?)(\d{3}[\s.-]?\d{4})$/i,
+              message: 'Debes escribir tú número de teléfono',
+            },
+          })
+          }
+        />
+        {errors.telefono && <p className={styles.error}>Debes escribir tú número de teléfono</p>}
 
         <label>Seleccione su requerimiento</label>
         <select
@@ -72,12 +121,22 @@ export default function WhatsappForm() {
         </p>}
 
         <center>
-          <input
-            type="submit"
-            value="Enviar"
-            disabled={!isValid}
-            className={styles.button}
-          />
+          {
+            loading
+              ? <>
+                <div className={styles.spinner}></div>
+                {<p
+                  className={sendResult.error ? styles.error : styles.ok}>
+                  {sendResult.msg}
+                </p>}
+              </>
+              : <input
+                type="submit"
+                value="Enviar"
+                disabled={!isValid}
+                className={styles.button}
+              />
+          }
         </center>
 
       </form>
