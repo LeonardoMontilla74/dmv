@@ -28,7 +28,7 @@ export default function WhatsappForm() {
       setSendResult({ msg: 'Mensaje enviado... ¡Gracias!', error: false });
       reset();
     } else {
-      setSendResult({ msg: 'Algo salió mal. Por favor vuelve a interntarlo', error: true });
+      setSendResult({ msg: '¡Algo salió mal! Por favor vuelve a interntarlo', error: true });
     }
 
     setTimeout(() => {
@@ -43,17 +43,18 @@ export default function WhatsappForm() {
       <form onSubmit={handleSubmit(onSubmit)}
         className={styles.form}
       >
+        <h3>¿Desea obtener una cotización?</h3>
 
         <input
           type="text"
-          placeholder='Nombre'
+          placeholder='Tú nombre'
           className={styles.input}
           {...register('nombre', {
             required: true,
             minLength: 3,
             pattern: {
               value: /^([a-zA-ZñÑáéíóúÁÉÍÓÚ ])+$/i,
-              message: 'El nombre debe ser solo texto',
+              message: 'El nombre solo debe tener letras',
             },
           })}
         />
@@ -66,7 +67,7 @@ export default function WhatsappForm() {
 
         <input
           type='email'
-          placeholder='Correo electrónico'
+          placeholder='Tú correo electrónico'
           className={styles.input}
           {...register('email', {
             pattern: {
@@ -75,30 +76,29 @@ export default function WhatsappForm() {
             },
           })}
         />
-        {errors.email && <p className={styles.error}>Escribe tú correo electronico</p>}
+        {errors.email && <p className={styles.error}>{errors.email.message}</p>}
 
         <input
           type="tel"
-          placeholder='Teléfono para contactarnos contigo'
+          placeholder='Tú número de teléfono'
           className={styles.input}
           {...register('telefono', {
             required: true,
             minLength: 10,
             pattern: {
               value: /^(\+\d{1, 2}\s)?(\(\d{3}\)\s?|\d{3}[\s.-]?)(\d{3}[\s.-]?\d{4})$/i,
-              message: 'Debes escribir tú número de teléfono',
+              message: 'Número de teléfono inválido',
             },
           })
           }
         />
-        {errors.telefono && <p className={styles.error}>Debes escribir tú número de teléfono</p>}
+        {errors.telefono && <p className={styles.error}>{errors.telefono.message}</p>}
 
-        <label>Seleccione su requerimiento</label>
         <select
           className={styles.input}
           {...register('type')}
         >
-          <option defaultValue={''} value="">Elija su opción</option>
+          <option defaultValue={''} value="">Selecciona tú requerimiento</option>
           <option
             className={styles.input}
             value="aseguranza">Aseguranzas</option>
@@ -132,7 +132,7 @@ export default function WhatsappForm() {
               </>
               : <input
                 type="submit"
-                value="Enviar"
+                value="Solicitar cotización"
                 disabled={!isValid}
                 className={styles.button}
               />

@@ -16,9 +16,9 @@
     background: -webkit-linear-gradient(to right, rgba(255, 205, 112, 0.205) 100%, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
   border-radius: 2.5em;
   margin: 1rem;
-  padding: 30px;
-  width: 300px;
-  height: 62vh;
+  padding: 1rem;
+  width: 50%;
+  height: max-content;
   min-height: max-content;
   border: solid #3e045e 0.5rem;
 }
@@ -26,7 +26,7 @@
 .button {
   margin-top: 10px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px;
+  font-size: 18px;
   background: #5B0888;
   color: #ffff;
   padding: 0.7em 5.5em;
