@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { IFormData } from '@/interfaces/IForm';
 import styles from './Whatsapp.module.css';
 
-export default function WhatsappForm() {
+export default function Form() {
   const {
     register,
     handleSubmit,

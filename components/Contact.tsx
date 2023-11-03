@@ -1,8 +1,6 @@
-import Image from 'next/image';
 import styles from './Pages.module.css';
 import stylesW from './Whatsapp.module.css';
-import WhatsappForm from './WhatsappForm';
-import bmw from '@/assets/bmw.png';
+import Form from './Form';
 
 export default function Contact() {
   return (
@@ -18,18 +16,11 @@ export default function Contact() {
             nuestro teléfono o nuestro formulario web.
           </p>
           <strong>¡Estaremos encantados de atenderle y resolver sus dudas!</strong>
-          <Image
-            src={bmw}
-            alt='contactanos'
-            width={150}
-            height={120}
-            className={styles.car}
-          />
         </div>
       </section>
 
       <section className={stylesW.container}>
-        <WhatsappForm />
+        <Form />
       </section>
     </article>
   );
