@@ -7,7 +7,7 @@
   align-items: center;
   width: 100vw;
   height: 6rem;
-  background-color: #404040;
+  background-color: rgba(0, 0, 0, 0.4);
   margin-bottom: 1rem;
 }
 

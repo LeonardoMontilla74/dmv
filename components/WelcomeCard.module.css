@@ -1,0 +1,75 @@
+.cardContainer {
+  position: absolute;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.9);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.notShow {
+  display: none;
+}
+
+.card {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #041134;
+  padding: 1rem;
+  gap: 1rem;
+  width: 65%;
+  height: max-content
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+
+.getButton {
+  display: inline-flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  width: 6rem;
+  height: 3rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  background-color: white;
+  color: rgb(33, 35, 36);
+  border: none;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.arrow {
+  display: none;
+}
+
+.getButton:hover {
+  width: 8rem;
+  .arrow{
+    display: flex;
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1rem;
+  font-style: bold;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  border: transparent;
+  background: transparent;
+}

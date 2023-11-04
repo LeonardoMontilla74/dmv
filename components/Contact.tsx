@@ -1,5 +1,4 @@
 import styles from './Pages.module.css';
-import stylesW from './Whatsapp.module.css';
 import Form from './Form';
 
 export default function Contact() {
@@ -9,7 +8,7 @@ export default function Contact() {
       className={styles.article}
     >
 
-      <section className={stylesW.container}>
+      <section className={styles.container}>
         <div className={styles.cardContact}>
           <p>Si desea contactarnos,
             puede hacerlo a través de nuestras redes sociales,
@@ -19,7 +18,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className={stylesW.container}>
+      <section className={styles.container}>
         <Form />
       </section>
     </article>

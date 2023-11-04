@@ -3,7 +3,7 @@
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { IFormData } from '@/interfaces/IForm';
-import styles from './Whatsapp.module.css';
+import styles from './Form.module.css';
 
 export default function Form() {
   const {

@@ -1,0 +1,29 @@
+.article {
+  display: flex;
+  width: 98.7vw;
+  height: 100vh;
+  background: url('../public/carWhite.jpg');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  justify-content: flex-end;
+}
+
+.title {
+  text-shadow: 1px 1px 0px rgba(230,230,230,1);
+}
+
+.cardServices {
+  width: 40rem;
+  height: 26rem;
+  margin: 2rem;
+  margin-top: 6.5rem;
+  font-size: 1.4rem;
+  color: #000000;
+  text-align: center;
+}
+
+.strong {
+  font-size: 2rem;
+  color: rgb(92, 2, 58);
+  text-shadow: 1px 1px 0px rgba(230,230,230,1);
+}

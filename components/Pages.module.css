@@ -3,8 +3,7 @@
   display: flex;
   width: 98.7vw;
   height: 100vh;
-  margin-top: 6rem;
-  scroll-margin-top: 6rem;
+  padding-top: 6rem;
 }
 
 /* ------------------ SERVICES ---------------- */
@@ -28,6 +27,13 @@
   text-shadow: 1px 1px 0px rgba(230,230,230,1);
 }
 /* ------------------ CONTACT ---------------- */
+.container{
+  display: flex;
+  width: 50vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+}
 
 .cardContact {
   display: flex;
