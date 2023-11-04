@@ -11,8 +11,7 @@
   margin-bottom: 1rem;
 }
 
-.listItems
-{
+.listItems {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -22,21 +21,20 @@
   margin: 2rem;
 }
 
-.link
-{
+.link {
   color: white;
   text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
-.link:hover
-{
+.link:hover {
   cursor: pointer;
   filter: brightness(0.6);
   transition: ease-in-out 300ms;
 }
 
-.logo
-{
+.logo {
   margin: 2rem;
   border-radius: 999px;
 }

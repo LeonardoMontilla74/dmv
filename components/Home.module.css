@@ -2,28 +2,60 @@
   display: flex;
   width: 98.7vw;
   height: 100vh;
-  background: url('../public/carWhite.jpg');
+  background: url('../public/ferrari.jpg');
   background-repeat: no-repeat;
-  background-size: 100vw 100vh;
-  justify-content: flex-end;
-}
-
-.title {
-  text-shadow: 1px 1px 0px rgba(230,230,230,1);
+  background-size: cover;
+  justify-content: flex-start;
 }
 
 .cardServices {
   width: 40rem;
   height: 26rem;
   margin: 2rem;
-  margin-top: 6.5rem;
-  font-size: 1.4rem;
-  color: #000000;
+  margin-top: 3rem;
   text-align: center;
 }
 
+.title {
+  font-family: Helvetica, sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #292828;
+}
+
 .strong {
-  font-size: 2rem;
-  color: rgb(92, 2, 58);
-  text-shadow: 1px 1px 0px rgba(230,230,230,1);
+  font-size: 5rem;
+  font-weight: 800;
+  font-family: Helvetica, sans-serif;
+  color: #1C9371;
+  text-shadow: 0px 10px 10px #292828;
+}
+
+.buttonCotizar {
+  display: inline-flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 6rem;
+  height: 3rem;
+  padding: 0.5rem;
+  margin: 1rem;
+  background-color: white;
+  color: rgb(33, 35, 36);
+  border: none;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.arrow {
+  display: none;
+}
+
+.buttonCotizar:hover {
+  width: 8rem;
+  .arrow{
+    display: flex;
+  }
 }

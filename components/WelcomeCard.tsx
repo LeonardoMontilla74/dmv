@@ -10,7 +10,7 @@ import family from '@/assets/family.jpg';
 import styles from './WelcomeCard.module.css';
 
 export default function WelcomeCard() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   return (
     <section className={show ? styles.cardContainer : styles.notShow}>

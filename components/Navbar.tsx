@@ -18,7 +18,6 @@ export default function Navbar() {
           className={styles.logo}
         />
       </Link>
-      <h1>Inspecciones y aseguranzas</h1>
       <ul className={styles.listItems}>
         <li>
           <Link
