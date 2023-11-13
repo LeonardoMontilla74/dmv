@@ -11,8 +11,8 @@
   align-items: center;
   flex-direction: column;
   gap: 0.4rem;
-  background: #20002c;  /* fallback for old browsers */
-    background: linear-gradient(to right, rgba(255, 205, 112, 0.205) 100%, #20002c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: var(--background-form);
+    background: var(--background-form-gradient);
     background: -webkit-linear-gradient(to right, rgba(255, 205, 112, 0.205) 100%, #20002c);  /* Chrome 10-25, Safari 5.1-6 */
   border-radius: 2.5em;
   margin: 1rem;
@@ -20,33 +20,26 @@
   width: 50%;
   height: max-content;
   min-height: max-content;
-  border: solid #3e045e 0.5rem;
+  border: solid var(--background-form) 0.4rem;
 }
 
 .button {
   margin-top: 10px;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  background: #5B0888;
-  color: #ffff;
+  background: var(--background-button);
+  color: var(--color-letter);
   padding: 0.7em 5.5em;
   display: flex;
   align-items: center;
-  border: 2px solid #66da4300;
   border-radius: 5em;
   overflow: hidden;
   transition: all 0.2s;
   cursor: pointer;
-}
-
-.button:active {
-  border: 2px solid #66da4300;
-  background: #5B0888;
-  color: #ffff;
+  border: none;
 }
 
 .button:disabled {
-  background-color: #6c4381;
+  background-color: var(--background-button-disabled);
   cursor: no-drop;
 }
 
@@ -54,57 +47,56 @@
   width: calc(100% - 10px);
   padding: 8px;
   margin-bottom: 10px;
-  border: 1px solid #66da4300;
-  border-bottom: 1px solid #5B0888;
+  border: none;
+  border-bottom: 1px solid var(--background-button);
   outline: none;
   background-color: transparent;
-  color: #5B0888;
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--background-form);
   transition: 0.2s;
 }
 
 .input:focus {
-  border: 1px solid #66da4300;
-  border-bottom: 1px solid #5B0888;
+  border: node;
+  border-bottom: 1px solid var(--background-button);
   background-color: transparent;
   color: white;
 }
 
 .input::placeholder {
-  color: #ffff;
+  color: var(--color-letter);
 }
 
 .textarea {
-  font-family: Helvetica, sans-serif;
   width: calc(100% - 10px);
   padding: 8px;
   height: 50px;
   margin-bottom: 10px;
-  border: 1px solid #66da4300;
-  border-bottom: 1px solid #5B0888;
+  border: none;
+  border-bottom: 1px solid var(--background-button);
   outline: none;
   background-color: transparent;
-  color: #5B0888;
+  color: var(--background-form);
+  font-family: monospace;
 }
 
 .textarea::placeholder {
-  color: #ffff;
+  color: var(--color-letter);
 }
 
 .textarea:focus {
-  border: 1px solid #66da4300;
-  border-bottom: 1px solid #5B0888;
+  border: none;
+  border-bottom: 1px solid var(--background-button);
   background-color: transparent;
-  color: white;
+  color: var(--color-letter);
 }
 
 .error {
-  font-size: 0.8rem;
-  color: red;
+  font-size: 1rem;
+  color: var(--color-error);
 }
 
 .ok {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #5cff47;
 }
 

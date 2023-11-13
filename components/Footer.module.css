@@ -1,16 +1,14 @@
-.footer
-{
+.footer {
   bottom: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 98.7vw;
   height: 3rem;
-  background-color: #404040;
+  background-color: var(--background-color-secodary);
 }
 
-.listFooter
-{
+.listFooter {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -19,15 +17,13 @@
   justify-items: flex-end;
 }
 
-.link
-{
+.link {
   text-decoration: none;
   margin: 1.5rem;
   cursor: pointer;
-  color: #ffff;
+  color: var(--color-letter);
 }
 
-.link:visited
-{
+.link:visited {
   text-decoration: none;
 }

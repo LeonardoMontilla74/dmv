@@ -1,8 +1,5 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Roboto } from 'next/font/google';
-
-const roboto = Roboto({ weight: '300', subsets: ['latin'] });
 
 const URL_BASE = process.env.VERCEL_URL || 'http://localhost:3000';
 
@@ -39,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={roboto.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
