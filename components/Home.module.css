@@ -17,7 +17,6 @@
 }
 
 .title {
-  font-family: Helvetica, sans-serif;
   font-size: 4rem;
   font-weight: 800;
   color: #292828;
@@ -26,36 +25,39 @@
 .strong {
   font-size: 5rem;
   font-weight: 800;
-  font-family: Helvetica, sans-serif;
   color: #1C9371;
   text-shadow: 0px 10px 10px #292828;
 }
 
 .buttonCotizar {
   display: inline-flex;
-  gap: 1rem;
+  gap: 0.5rem;
   justify-content: flex-start;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.8rem;
   font-weight: bold;
-  width: 6rem;
-  height: 3rem;
+  width: 8rem;
+  height: 4.5rem;
   padding: 0.5rem;
   margin: 1rem;
-  background-color: white;
-  color: rgb(33, 35, 36);
+  background-color: rgba(253, 252, 252, 0.6);
+  color: var(--background-card);
   border: none;
+  border-radius: 0.2rem;
   cursor: pointer;
-  transition: all 500ms;
+  transition: all 300ms;
 }
 
 .arrow {
-  display: none;
+ display: none;
+ font-size: 3rem;
 }
 
 .buttonCotizar:hover {
-  width: 8rem;
+  width: 11rem;
+  background-color: rgba(206, 255, 206, 0.8);
+  box-shadow: 0px 0px 15px 0px  rgba(253, 252, 252, 0.8);
   .arrow{
-    display: flex;
+    display: block;
   }
 }

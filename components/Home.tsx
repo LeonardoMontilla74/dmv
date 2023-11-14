@@ -1,4 +1,5 @@
 import { FaLongArrowAltRight } from 'react-icons/fa';
+import Link from 'next/link';
 import styles from '@/components/Home.module.css';
 
 export default function Home() {
@@ -14,14 +15,18 @@ export default function Home() {
           </h3>
         </span>
 
+        <Link
+          href='#contact'>
         <button
           type="button"
           className={styles.buttonCotizar}
-        >
-          Solicitar cotización
+          >
+            Cotizar
           <FaLongArrowAltRight className={styles.arrow} />
         </button>
+        </Link>
       </section>
+
     </article>
   );
 }

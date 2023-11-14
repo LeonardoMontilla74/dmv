@@ -2,6 +2,9 @@
   --background-color-primary: #212121;
   --background-color-secodary: #404040;
   --color-letter: #f0ecec;
+  
+  /* ----------- Welcome ------------ */
+  --background-card: #1C9371;
 
   /* ----------- form ------------ */
   --background-form: #20002c;
