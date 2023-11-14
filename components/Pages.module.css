@@ -50,6 +50,24 @@
   margin: 1rem;
 }
 
+.socialRed {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--color-letter);
+}
+
+.link:visited {
+  text-decoration: none;
+}
+
 /* ------------------ ABOUT ---------------- */
 
 .container{

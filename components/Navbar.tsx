@@ -7,7 +7,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar}>
       <Link
-        href='/'
+        href='#home'
       >
         <Image
           src={logo}
@@ -22,7 +22,8 @@ export default function Navbar() {
         <li>
           <Link
             href='#services'
-            className={styles.link}>
+            className={styles.link}
+          >
             Servicios
           </Link>
         </li>

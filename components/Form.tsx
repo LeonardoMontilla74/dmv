@@ -43,7 +43,7 @@ export default function Form() {
       <form onSubmit={handleSubmit(onSubmit)}
         className={styles.form}
       >
-        <h3>¿Desea obtener una cotización?</h3>
+        <h3>¿Deseas una cotización?</h3>
 
         <input
           type="text"
@@ -95,18 +95,24 @@ export default function Form() {
         {errors.telefono && <p className={styles.error}>{errors.telefono.message}</p>}
 
         <select
-          className={styles.input}
+          className={styles.option}
           {...register('type')}
         >
-          <option defaultValue={''} value="">Selecciona tú requerimiento</option>
           <option
-            className={styles.input}
+            defaultValue={''}
+            value=""
+            className={styles.option}
+          >
+            Selecciona tu requerimiento
+          </option>
+          <option
+            className={styles.option}
             value="aseguranza">Aseguranzas</option>
           <option
-            className={styles.input}
+            className={styles.option}
             value="sticker">Sticker</option>
           <option
-            className={styles.input}
+            className={styles.option}
             value="placas">Placas temporales</option>
         </select>
 

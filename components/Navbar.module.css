@@ -34,6 +34,10 @@
   transition: ease-in-out 300ms;
 }
 
+.link:current {
+  border-bottom: solid 0.3rem var(--color-letter);
+}
+
 .logo {
   margin: 2rem;
   border-radius: 999px;

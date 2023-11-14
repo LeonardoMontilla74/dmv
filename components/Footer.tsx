@@ -13,7 +13,6 @@ export default function Footer() {
         </li>
         <li>
           <Link href='https://www.facebook.com/profile.php?id=61552049453742'
-            target='_blank'
             className={styles.link}
           >
             <BsFacebook size={22} /> {' '}

@@ -2,7 +2,7 @@
   display: flex;
   width: 98.7vw;
   height: 100vh;
-  background: url('../public/ferrari.jpg');
+  background: url('../public/porsche.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   justify-content: flex-start;
@@ -13,20 +13,21 @@
   height: 26rem;
   margin: 2rem;
   margin-top: 3rem;
-  text-align: center;
+  text-align: left;
 }
 
 .title {
   font-size: 4rem;
   font-weight: 800;
-  color: #292828;
+  color: var(--color-letter);
+  text-shadow: 0px 5px 5px #292828;
 }
 
 .strong {
   font-size: 5rem;
   font-weight: 800;
-  color: #1C9371;
-  text-shadow: 0px 10px 10px #292828;
+  color: var(--color-logo);
+  text-shadow: 0px 5px 5px #797070;
 }
 
 .buttonCotizar {
@@ -37,11 +38,11 @@
   font-size: 1.8rem;
   font-weight: bold;
   width: 8rem;
-  height: 4.5rem;
+  height: 3rem;
   padding: 0.5rem;
   margin: 1rem;
   background-color: rgba(253, 252, 252, 0.6);
-  color: var(--background-card);
+  color: var(--color-logo);
   border: none;
   border-radius: 0.2rem;
   cursor: pointer;
@@ -50,11 +51,11 @@
 
 .arrow {
  display: none;
- font-size: 3rem;
+ font-size: 2rem;
 }
 
 .buttonCotizar:hover {
-  width: 11rem;
+  width: 10rem;
   background-color: rgba(206, 255, 206, 0.8);
   box-shadow: 0px 0px 15px 0px  rgba(253, 252, 252, 0.8);
   .arrow{

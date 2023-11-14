@@ -43,7 +43,7 @@
   cursor: no-drop;
 }
 
-.input {
+.input, .option {
   width: calc(100% - 10px);
   padding: 8px;
   margin-bottom: 10px;
@@ -55,7 +55,7 @@
   transition: 0.2s;
 }
 
-.input:focus {
+.input:focus, .option:focus {
   border: node;
   border-bottom: 1px solid var(--background-button);
   background-color: transparent;
@@ -64,6 +64,10 @@
 
 .input::placeholder {
   color: var(--color-letter);
+}
+
+.option {
+  background: transparent;
 }
 
 .textarea {
